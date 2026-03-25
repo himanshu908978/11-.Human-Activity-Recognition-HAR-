@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Human recogniser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header1">
+        <h1 class="firsth1">Project11</h1>
+        <div class="result1">
+            <button class="results">Results</button>
+            <button class="firstb1">About this project</button>
+        </div>
+    </header>
+
+    <section class="Firstsection">
+        <div class="about">
+            <p class="heading">
+                Upload video to check the activity in video.
+            </p>
+        </div>
+        <div class="everythingcontainer">
+            <div class="btn">
+                <div class="img-view">
+
+                </div>
+                <label for="input1" class="uploadimg">
+                    <input type="file" accept="video/*" id="input1" hidden>
+                    <video src="" class="img1" controls></video>
+                    <div class="uploadimgc">
+                        <i class="fa-solid fa-cloud-arrow-up cloudicon"></i>
+                        <p class="iv1">Drag and drop or click here <br>to upload video.</p>
+                        <span class="span1">Upload any video from desktop</span>
+                    </div>
+                </label>
+                <div class="answerwrapper">
+                    <div class="result">
+                        <p class="answer">
+                            <!-- The number present in image is 999. -->
+                        </p>
+                        <p class="answer1">
+                            <!-- Model confidence score is 999. -->
+                        </p>
+                    </div>
+                    <p class="uploadbtn">
+                        Upload Video
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="firstfooter">
+        <p class="footerp">THIS PROJECT IS MADE BY THE HOLY HANDS OF GOD UPRETI</p>
+    </footer>
+
+    <div class="Everything">
+        <div class="everythingwrapper">
+            <p class="projectname">Project 11 :- Brain Tumor Classification — PyTorch</p>
+            <p class="aboutproject">About this project</p>
+            <div class="everyprojectdetail">
+                <p class="projectdetail">This is my Eleventh project in the domain of AI/ML/DL whose AI model is made by
+                    using the Pytorch and concepts of CNN(Convulational Neural Network) and trained on HMDB51
+                    dataset.</p>
+                <!-- <p class="projectdetail1">Then i discovered Pytorch,Tensorflow and Keras,and I choosed Pytorch for my
+                    learning because I found out pytorch more flexible, easy to learn, on demand and best for my
+                    learning.</p> -->
+                <p class="projectdetail1">This Activity Recogniser project detects whether there is an activity of labels in your given
+                    video.</p>
+                <!-- <p class="projectdetail1">Transformations on input image :- </p>
+                <div class="transformation">
+                    <p class="projectdetail1 transforms">transforms.Grayscale()</p>
+                    <p class="projectdetail1 transforms">transforms.Resize((28,28))</p>
+                    <p class="projectdetail1 transforms">transforms.ToTensor()</p>
+                    <p class="projectdetail1 transforms">transforms.Normalize(mean = (0.5,),std = (0.5,))</p>
+                </div> -->
+
+                <p class="projectdetail1">This trained AI model detect the labels in image and gives you a
+                    label that it could find in your given image and also give a Confidence score that
+                    represents that how much confident model really is to give you that output. </p>
+
+                <p class="labels">Labels :- </p>
+                <div class="list">
+                    <ul>
+                        <li>walk</li>
+                        <li>talk</li>
+                        <li>stand</li>
+                        <li>sit</li>
+                        <li>eat</li>
+                        <li>drink</li>
+                        <li>laugh</li>
+                        <li>smile</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <p class="projectdetail2">So if you upload a video that belongs to any of these label's category then you
+                will get a predicted class from model in this scenario normal and pneumonia label and confidence score
+                that shows the surety of predicted class.</p>
+
+            <p class="whatiwanted">Conclusion</p>
+            <div class="whatiwanteddiv">
+                <p class="whatiwanted1">I trained this model on google colab notebook's free GPU T4(it comes with a
+                    specfic duration of usage) for 10 epochs and then the minimum loss was about 1.98 something and i
+                    got 29% accuracy on testing dataset of HMDB51
+                    dataset.</p>
+
+                <p class="labels">Test dataset metrics :- </p>
+                <div class="list">
+                    <ul>
+                        <li>1).Accuracy :- 0.298001998001998 </li>
+                        <li>2).F1 :- 0.2880000799168864 </li>
+                        <li>3).Recall :- 0.2680657640232109</li>
+                    </ul>
+                </div>
+                <!-- <p class="whatiwanted1 catch">This accuracy seems low but when i tested the model on the randomly images taken by google related to labels(Dog and cat) then i notice that model performing very well even for different images of same category.</p> -->
+                <!-- <p class="whatiwanted1 catch">Catch : </p>
+                <div class="whatiwantedinner">
+                    <p class="whatiwanted1">When i tested this model it was giving 99% accuracy that is great means
+                        it was correctly detecting 99 images number out of 100 but only images that </p>
+                    <p class="whatiwanted1">look like the images
+                        that are present in Fashion-MNIST training dataset images, but when i gave images that are not
+                        like
+                        that then it was not performing </p>
+                    <p class="what1wanted1">as i wanted then i was trying to make my own custom dataset for
+                        training but due to lack of resource i was not able to do that.</p>
+                </div> -->
+                <p class="whatiwanted1">So final conclusion is that this model can predict the activity of video but of specific classes on which this model was trained.</p>
+                <p class="whatiwanted1">Well if we looks at the HMDB51 dataset then we will find that there are 51 different classes in the dataset but i trained this model for only 8 classes and there is a reason because on google colab it took 2.5hour to train this model with only 8 classes and trained on only 20 frames.</p>
+                <p class="whatiwanted1">And if we calculate or even compare this with 51 classes and with at least 60frames then it could take some 7-10days to train this model with approx accuracy on dataset of 50%-55% but for my condition this is impossible and even after this model will be still unreliable.</p>
+                <p class="whatiwanted1">So i will consider this project as a learning project and i would not like to recommend this project's prediction as reliable predictions. </p>
+                <!-- <p class="whatiwanted1">Fun Fact :- This time even when you upload your photo this model will definetly tell you label of dog and cat,may be it is finding the dog's or cat's facial features on your face.</p> -->
+                <!-- <p class="whatiwanted1">Why don't you try this.</p> -->
+                <p class="whatiwanted1 thanks">Thanks</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="everythingcontainer1">
+        <div class="everything">
+            <p class="projectname1">Project 11 :- Human Activity Recognition (HAR) - PyTorch</p>
+            <div class="allimg">
+                <div class="allimgwrapper">
+                    <p class="unreliable">My apologies, </p>
+                    <p class="unreliable">But i would not like to show you </p>
+                    <div class="fake">
+                        <p class="unreliable">UNRELIABLE </p>
+                        <p class="unreliable"> </p>
+                        <p class="unreliable or"> or </p>
+                        <p class="unreliable"> </p>
+                        <p class="unreliable"> FAKE RESULTS</p>
+                    </div>
+                    <p class="unreliable">because i would not like to mislead a person who trusts </p>
+                    <p class="unreliable upreti">HIMANSHU UPRETI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
